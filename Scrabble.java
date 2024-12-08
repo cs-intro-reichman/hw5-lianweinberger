@@ -73,12 +73,19 @@ public class Scrabble {
 		return points;
 	}
 
-	// Creates a random hand of length (HAND_SIZE - 2) and then inserts
-	// into it, at random indexes, the letters 'a' and 'e'
-	// (these two vowels make it easier for the user to construct words)
+	// // Creates a random hand of length (HAND_SIZE - 2) and then inserts
+	// // into it, at random indexes, the letters 'a' and 'e'
+	// // (these two vowels make it easier for the user to construct words)
+	// public static String createHand() {
+	// 	String hand = MyString.randomStringOfLetters(HAND_SIZE - 2);
+	// 	hand += "ae";
+	// 	return hand;
+	// }
+
 	public static String createHand() {
 		String hand = MyString.randomStringOfLetters(HAND_SIZE - 2);
-		hand += "ae";
+		hand = MyString.insertRandomly('a', hand);
+		hand = MyString.insertRandomly('e', hand);
 		return hand;
 	}
 	
