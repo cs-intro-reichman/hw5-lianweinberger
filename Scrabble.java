@@ -68,6 +68,7 @@ public class Scrabble {
 			char ch = word.charAt(i);
 			points += SCRABBLE_LETTER_VALUES[ch - 'a'];
 		} 
+		points *= word.length();
 		if (word.length() == HAND_SIZE) points += 50;
 		if (MyString.subsetOf("runi", word)) points += 1000;
 
@@ -79,8 +80,9 @@ public class Scrabble {
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
 		//// Replace the following statement with your code
-		
-		return null;
+		String hand = MyString.randomStringOfLetters(HAND_SIZE - 2);
+		hand+= "a,e";
+		return hand;
 	}
 	
     // Runs a single hand in a Scrabble game. Each time the user enters a valid word:
