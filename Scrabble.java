@@ -81,7 +81,7 @@ public class Scrabble {
 	public static String createHand() {
 		//// Replace the following statement with your code
 		String hand = MyString.randomStringOfLetters(HAND_SIZE - 2);
-		hand+= "a,e";
+		hand += "ae";
 		return hand;
 	}
 	
