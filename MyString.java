@@ -4,23 +4,22 @@
 public class MyString {
     public static void main(String args[]) {
         String hello = "hello";
-        // System.out.println(countChar(hello, 'h'));
-        // System.out.println(countChar(hello, 'l'));
-        // System.out.println(countChar(hello, 'z'));
+        System.out.println(countChar(hello, 'h'));
+        System.out.println(countChar(hello, 'l'));
+        System.out.println(countChar(hello, 'z'));
         
-        // System.out.println(subsetOf("sap", "space"));
-        // System.out.println(subsetOf("ssap", "space"));
+        System.out.println(subsetOf("sap", "space"));
+        System.out.println(subsetOf("ssap", "space"));
         System.out.println(subsetOf("train", "aretiin"));
 
+        System.out.println(spacedString("silent"));
 
-        // System.out.println(spacedString("silent"));
-
-        // System.out.println(randomStringOfLetters(10));
+        System.out.println(randomStringOfLetters(10));
         
-        // System.out.println(remove("meet","committee"));
-        // System.out.println(remove("et","committee"));
+        System.out.println(remove("meet","committee"));
+        System.out.println(remove("et","committee"));
 
-        // System.out.println(insertRandomly('h', "cat"));
+        System.out.println(insertRandomly('h', "cat"));
 
 
 
