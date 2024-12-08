@@ -112,7 +112,6 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-       //// Replace the following statement with your code
         if (str2.equals("")){
             return str1;
         }
