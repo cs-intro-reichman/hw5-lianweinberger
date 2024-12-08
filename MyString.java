@@ -113,9 +113,13 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
        //// Replace the following statement with your code
-        String newStr = str2;
-        for (int i = 0; i < str1.length(); i++) {
-            int index = newStr.indexOf(str1.charAt(i));
+        if (str2.equals("")){
+            return str1;
+        }
+
+        String newStr = str1;
+        for (int i = 0; i < str2.length(); i++) {
+            int index = newStr.indexOf(str2.charAt(i));
             if (index != -1) {
                 newStr = newStr.substring(0, index) + newStr.substring(index + 1);
             }
