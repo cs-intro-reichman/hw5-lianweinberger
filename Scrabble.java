@@ -52,7 +52,7 @@ public class Scrabble {
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
 		for (int i = 0; i < DICTIONARY.length; i++) {
-			if (word == DICTIONARY[i]) return true;
+			if (word.equals(DICTIONARY[i])) return true;
 		}
 		return false;
 	}
@@ -113,6 +113,7 @@ public class Scrabble {
 				System.out.println();
 				hand = MyString.remove(hand, input);
 			}
+			
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");

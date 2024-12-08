@@ -4,21 +4,23 @@
 public class MyString {
     public static void main(String args[]) {
         String hello = "hello";
-        System.out.println(countChar(hello, 'h'));
-        System.out.println(countChar(hello, 'l'));
-        System.out.println(countChar(hello, 'z'));
+        // System.out.println(countChar(hello, 'h'));
+        // System.out.println(countChar(hello, 'l'));
+        // System.out.println(countChar(hello, 'z'));
         
-        System.out.println(subsetOf("sap", "space"));
-        System.out.println(subsetOf("ssap", "space"));
+        // System.out.println(subsetOf("sap", "space"));
+        // System.out.println(subsetOf("ssap", "space"));
+        System.out.println(subsetOf("train", "aretiin"));
 
-        System.out.println(spacedString("silent"));
 
-        System.out.println(randomStringOfLetters(10));
+        // System.out.println(spacedString("silent"));
+
+        // System.out.println(randomStringOfLetters(10));
         
-        System.out.println(remove("meet","committee"));
-        System.out.println(remove("et","committee"));
+        // System.out.println(remove("meet","committee"));
+        // System.out.println(remove("et","committee"));
 
-        System.out.println(insertRandomly('h', "cat"));
+        // System.out.println(insertRandomly('h', "cat"));
 
 
 
@@ -52,39 +54,20 @@ public class MyString {
      * @param str2 - a string
      * @return true is str1 is a subset of str2, false otherwise
      */
-    // public static boolean subsetOf(String str1, String str2) {
-    //     int[] charFrequency = new int[26];
-    //     for (int i = 0; i < str2.length(); i++) {
-    //         charFrequency[str2.charAt(i) - 'a']++;
-    //     }
+    public static boolean subsetOf(String str1, String str2) {
+        int[] charFrequency = new int[26];
 
-    //     for (int i = 0; i < str1.length(); i++) {
-    //         if (charFrequency[str1.charAt(i) - 'a'] <= 0) return false;
-    //         charFrequency[str1.charAt(i) - 'a']--;
-    //     }
-
-    //     return true;
-    // }
-
-    public static boolean subsetOf(String str1, String str2){
-
-        if (str1.length() > str2.length()){
-            return false;
+        for (int i = 0; i < str2.length(); i++) {
+            charFrequency[str2.charAt(i) - 'a']++;
         }
 
         for (int i = 0; i < str1.length(); i++) {
-            char ch = str1.charAt(i);
-            if (str2.indexOf(ch) != -1){
-                str2 = str2.substring(0, str2.indexOf(ch)) + 
-                str2.substring(str2.indexOf(ch) + 1);
-            } else {
-                return false;
-            }
+            if (charFrequency[str1.charAt(i) - 'a'] <= 0) return false;
+            charFrequency[str1.charAt(i) - 'a']--;
         }
 
         return true;
     }
-  
 
     /** Returns a string which is the same as the given string, with a space
      * character inserted after each character in the given string, except
