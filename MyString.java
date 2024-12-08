@@ -96,7 +96,7 @@ public class MyString {
     public static String randomStringOfLetters(int n) {
         String ranLetterStr = "";
         for (int i = 0; i < n; i++) {
-            char randomCh = (char) (97 + (int) (Math.random() * (122 - 97 + 1)));
+            char randomCh = (char) ((int) 'a' + (int) (Math.random() * ('z' - 'a' + 1)));
             ranLetterStr += randomCh;
         }
         return ranLetterStr;

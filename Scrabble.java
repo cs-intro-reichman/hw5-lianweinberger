@@ -1,6 +1,9 @@
 /*
  * RUNI version of the Scrabble game.
  */
+
+import java.util.Dictionary;
+
 public class Scrabble {
 
 	// Note 1: "Class variables", like the five class-level variables declared below,
@@ -49,6 +52,9 @@ public class Scrabble {
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
 		//// Replace the following statement with your code
+		for (int i = 0; i < DICTIONARY.length; i++) {
+			if (word == DICTIONARY[i]) return true;
+		}
 		return false;
 	}
 	
@@ -57,7 +63,15 @@ public class Scrabble {
 	// If the word includes the sequence "runi", adds 1000 points to the game.
 	public static int wordScore(String word) {
 		//// Replace the following statement with your code
-		return 0;
+		int points = 0;
+		for (int i = 0; i < word.length(); i++) {
+			char ch = word.charAt(i);
+			points += SCRABBLE_LETTER_VALUES[ch - 'a'];
+		} 
+		if (word.length() == HAND_SIZE) points += 50;
+		if (MyString.subsetOf("runi", word)) points += 1000;
+
+		return points;
 	}
 
 	// Creates a random hand of length (HAND_SIZE - 2) and then inserts
@@ -65,6 +79,7 @@ public class Scrabble {
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
 		//// Replace the following statement with your code
+		
 		return null;
 	}
 	
